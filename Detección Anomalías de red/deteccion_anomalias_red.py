@@ -26,7 +26,7 @@ class AnomalyDetector:
         normal_data = {
             'bytes_sent': np.random.normal(500, 100, n_normal),
             'bytes_received': np.random.normal(800, 150, n_normal),
-            'packet_count': np.random.normal(50, 15, n_normal),
+            'packet_count': np.maximum(0, np.random.normal(50, 15, n_normal)),
             'duration': np.random.normal(120, 30, n_normal),
             'connections_per_hour': np.random.normal(10, 3, n_normal),
             'error_rate': np.random.beta(2, 50, n_normal)
@@ -36,7 +36,7 @@ class AnomalyDetector:
         anomaly_data = {
             'bytes_sent': np.random.normal(2000, 500, n_anomalies),
             'bytes_received': np.random.normal(5000, 1000, n_anomalies),
-            'packet_count': np.random.normal(500, 100, n_anomalies),
+            'packet_count': np.maximum(0, np.random.normal(500, 100, n_anomalies)),
             'duration': np.random.normal(5, 2, n_anomalies),
             'connections_per_hour': np.random.normal(100, 20, n_anomalies),
             'error_rate': np.random.beta(10, 2, n_anomalies)
