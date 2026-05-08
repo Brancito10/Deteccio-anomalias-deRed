@@ -37,5 +37,5 @@ python -m streamlit run deteccion_anomalias_red.py
 
 ### Nota
 
-- Si Streamlit te pide un email durante el primer lanzamiento, puedes dejar el campo vacío y presionar `Enter`.
-- Asegúrate de usar Python 3.10 o superior.
+- Si Streamlit te pide un email durante el primer lanzamiento, dejar el campo vacío y presionar `Enter`.
+- Asegúr de usar Python 3.10 o superior.
